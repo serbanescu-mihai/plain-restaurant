@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="logo">
+        <a href="#header"><p>francesco</p></a>
+      </div>
+
+      <ul class="navigation-links">
+        <li>
+          <a href="#header"><i class="fa-solid fa-house"></i>Home</a>
+        </li>
+        <li>
+          <a href="#about"
+            ><i class="fa-regular fa-face-smile-wink"></i>About</a
+          >
+        </li>
+        <li>
+          <a href="#menu"><i class="fa-solid fa-utensils"></i>Menu</a>
+        </li>
+        <!-- <li>
+          <a href="#wine"><i class="fa-solid fa-wine-glass"></i>Wine</a>
+        </li> -->
+        <li>
+          <a href="#book"><i class="fa-regular fa-calendar-check"></i>Book</a>
+        </li>
+        <!-- <li><a href="">Location</a></li> -->
+        <li>
+          <a href="#contact"> <i class="fa-solid fa-globe"></i>Contact</a>
+        </li>
+      </ul>
+
+      <ul class="social">
+        <li class="socialIcon">
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+        </li>
+        <li class="socialIcon">
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </li>
+        <li class="socialIcon">
+          <a href="https://twitter.com/" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <header class="section header" id="header">
+      <div class="header-container">
+        <h1>francesco</h1>
+        <a href="tel:+00 0 000 0000"
+          ><i class="fa-solid fa-phone"></i> call now +43 681 123 0000</a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="section about" id="about">
+        <h2 class="center allcaps fs2 mb2 accent">about</h2>
+        <section class="container flex">
+          <article class="plr2">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta rem
+              ad incidunt. Enim ad nesciunt nihil pariatur quis blanditiis.
+              Assumenda magni ipsam rem expedita, corporis omnis deleniti dolore
+              distinctio maiores voluptatibus tempora, nostrum commodi, nam
+              quibusdam explicabo recusandae provident atque! Quis tempore
+              voluptas facere quaerat vel illum impedit libero quam.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta rem
+              ad incidunt. Enim ad nesciunt nihil pariatur quis blanditiis.
+              Assumenda magni ipsam rem expedita, corporis omnis deleniti dolore
+              distinctio maiores voluptatibus tempora, nostrum commodi, nam
+              quibusdam explicabo recusandae provident atque! Quis tempore
+              voluptas facere quaerat vel illum impedit libero quam.
+            </p>
+          </article>
+          <aside class="plr2">
+            <img src="images/fancy-restaurant.jpg" alt="" />
+          </aside>
+        </section>
+      </section>
+
+      <section class="section menu" id="menu">
+        <h2 class="center allcaps fs2 mb2 accent">menu</h2>
+        <div class="button-container"></div>
+        <section class="menu-container"></section>
+      </section>
+
+      <section class="section book" id="book">
+        <h2 class="center allcaps fs2 mb2 accent">book</h2>
+        <div class="form-container">
+          <form class="form" action="">
+            <div class="form-name">
+              <label for="name">Name:</label>
+              <input type="text" name="name" id="name" placeholder="John Doe" />
+            </div>
+            <div class="form-phone">
+              <label for="phone">Phone:</label>
+              <input type="text" name="phone" id="phone" placeholder="12345" />
+            </div>
+            <div class="form-email">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="email@domain.com"
+              />
+            </div>
+            <div class="form-time"></div>
+            <div class="form-message">
+              <label for="message">Message:</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="your message or special request"
+              ></textarea>
+            </div>
+            <button type="submit" class="formSubmit">Book now</button>
+          </form>
+        </div>
+      </section>
+      <section class="section contact" id="contact">
+        <h2 class="center allcaps fs2 mb2 accent">contact</h2>
+        <article>
+          <p><span>Phone number: </span> 00123123</p>
+          <p><span>Email: </span>email@email.com</p>
+          <p><span>Adress: </span>street Name, number 00</p>
+        </article>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.55843584457!2d16.348870780310225!3d48.253626979334584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d06202c81cec7%3A0x4bc7b5ff100b8511!2sFrancesco%20Grinzing!5e0!3m2!1sen!2sat!4v1675193573571!5m2!1sen!2sat"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script type="module" src="./data.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
