@@ -1,15 +1,9 @@
 import { menu } from "./data.js";
 
-// get parent element
 const menuContainer = document.querySelector(".menu-container");
 const buttonContainer = document.querySelector(".button-container");
-// display all items when page loads
-window.addEventListener("DOMContentLoaded", () => {
-  diplayMenuItems(menu);
-  displayMenuButtons();
-});
 
-function diplayMenuItems(menuItems) {
+const diplayMenuItems = (menuItems) => {
   let displayMenu = menuItems.map((item) => {
     const {
       id,
@@ -27,12 +21,12 @@ function diplayMenuItems(menuItems) {
             <div>
               <header class="menu-item-header">
                 <h3>${name}</h3>
-                <p class="price">${price}</p>
+                <p class="price">€ ${price}</p>
               </header>
 
               <p class="description">${description}</p>
               <p class="ingredients"><span>Ingredients: </span>${ingredients}</p>
-              <p class="ingredients"><span>Alergens: </span>${alergens}</p>
+              <!-- <p class="ingredients"><span>Alergens: </span>${alergens}</p> -->
             </div>
           </article>`;
   });
@@ -40,10 +34,10 @@ function diplayMenuItems(menuItems) {
   console.log(displayMenu);
 
   menuContainer.innerHTML = displayMenu;
-}
-function displayMenuButtons() {
+};
+const displayMenuButtons = () => {
   const categories = menu.reduce(
-    function (values, item) {
+    (values, item) => {
       if (!values.includes(item.category)) {
         values.push(item.category);
       }
@@ -51,24 +45,22 @@ function displayMenuButtons() {
     },
     ["all"]
   );
-  const categoryBtns = categories
-    .map(function (category) {
-      return `<button type="button" class="filter-btn" data-id=${category}>
+  const categoryButtons = categories
+    .map((category) => {
+      return `<button type="button" class="filter-button" data-id=${category}>
           ${category}
         </button>`;
     })
     .join("");
 
-  buttonContainer.innerHTML = categoryBtns;
-  const filterBtns = buttonContainer.querySelectorAll(".filter-btn");
-  console.log(filterBtns);
+  buttonContainer.innerHTML = categoryButtons;
+  const filterButtons = buttonContainer.querySelectorAll(".filter-button");
+  console.log(filterButtons);
 
-  filterBtns.forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      // console.log(e.currentTarget.dataset);
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
       const category = e.currentTarget.dataset.id;
-      const menuCategory = menu.filter(function (menuItem) {
-        // console.log(menuItem.category);
+      const menuCategory = menu.filter((menuItem) => {
         if (menuItem.category === category) {
           return menuItem;
         }
@@ -80,7 +72,12 @@ function displayMenuButtons() {
       }
     });
   });
-}
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+  diplayMenuItems(menu);
+  displayMenuButtons();
+});
 
 //form
 const form = document.querySelector(".form");
